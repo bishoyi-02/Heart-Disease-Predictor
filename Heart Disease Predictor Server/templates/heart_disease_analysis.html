@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Predictior</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- <img src="{{ url_for('static', filename='images/healthy.jpg' ) }}" class="img-fluid" alt="..."/> -->
+    <div  class="container mb-4 mt-5 text-center border">
+        <h1>Heart Disease Predictor</h1>
+    </div>
+    <hr >
+    <div class="container border p-3 mt-4 ">
+      <form action="{{url_for("predict")}}" method="POST" class=" row g-1">
+        <div class="col-md-1">
+          <label for="age" class="form-label">Age</label>
+          <input
+            type="text"
+            class="form-control"
+            id="age"
+            name="age"
+            value=""
+            required
+          />
+        </div>
+        <div class="col-md-1">
+          <label for="sex" class="form-label">Sex</label>
+          <input
+            type="text"
+            class="form-control"
+            id="sex"
+            name="sex"
+            value=""
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="chestPainType" class="form-label"
+            >Chest Pain Type</label
+          >
+          <div class="input-group">
+           
+            <input
+              type="text"
+              class="form-control"
+              id="chestPainType"
+              name="chestPainType"
+              aria-describedby="inputGroupPrepend2"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <label for="bloodPressure" class="form-label">Blood Pressure</label>
+          <input
+            type="text"
+            class="form-control"
+            id="bloodPressure"
+            name="bloodPressure"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="cholestrol" class="form-label">Cholestrol</label>
+          <input
+            type="text"
+            class="form-control"
+            name="cholestrol"
+            id="cholestrol"
+            required
+          />
+        </div>
+        
+        
+        <div class="col-md-2">
+          <label for="bloodSugar" class="form-label">Blood Sugar</label>
+          <input
+            type="text"
+            class="form-control"
+            id="bloodSugar"
+            name="bloodSugar"
+            required
+          />
+        </div>
+        <div class="col-md-1">
+          <label for="ecg" class="form-label">ECG</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ecg"
+            name="ecg"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="maxHeartRate" class="form-label">Max Heart Rate</label>
+          <input
+            type="text"
+            class="form-control"
+            id="maxHeartRate"
+            name="maxHeartRate"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="exerAgina" class="form-label">Exer. Angina</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exerAgina"
+            name="exerAgina"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="oldPeak" class="form-label">Old Peak</label>
+          <input
+            type="text"
+            class="form-control"
+            id="oldPeak"
+            name="oldPeak"
+            required
+          />
+        </div>
+        <div class="col-md-1">
+          <label for="st" class="form-label">ST</label>
+          <input
+            type="text"
+            class="form-control"
+            id="st"
+            name="st"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="majorVessel" class="form-label">No. Major Vessels</label>
+          <input
+            type="text"
+            class="form-control"
+            id="majorVessel"
+            name="majorVessel"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="majorVessel" class="form-label">Thal</label>
+          <input
+            type="text"
+            class="form-control"
+            id="thal"
+            name="thal"
+            required
+          />
+        </div>
+       
+        <div class="col-12  text-center mt-3 ">
+          <button class="btn btn-primary" type="submit">Predict</button>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
